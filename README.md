@@ -1,6 +1,6 @@
 # 📄 CVGEN — Générateur de CV en ligne
 
-CVGEN est une application web interactive permettant de créer et personnaliser facilement un CV professionnel, puis de le *télécharger au format PDF*. Ce projet a été réalisé dans le cadre d’un exercice/examen en développement web.
+CVGEN est une application web interactive permettant de créer et personnaliser facilement un CV professionnel, puis de le *télécharger au format PDF*. Ce projet a été réalisé dans le cadre d’un examen en JavaScript.
 
 ---
 
