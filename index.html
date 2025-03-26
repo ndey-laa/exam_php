@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cvgen</title>
+    <link rel="icon" type="image/x-icon" href="./assetes/img/logo.png">
+    <link rel="stylesheet" href="./assetes/style/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
+</head>
+</head>
+
+<body>
+    <div>
+        <header class="entete">
+            <nav>
+                <ul>
+                    <img class="img" src="./assetes/img/logo.png" alt="">
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <div id="h1container">
+        <h2>Informations</h2>
+    </div>
+    <div class="inputcontainer" id="pliercontainer1">
+        <img src="./assetes/img/fleche-vers-le-bas-pour-naviguer.png" class="fleche" id="flecheDonn" alt="">
+        <h3 style="margin-bottom: 10px;">Données personnelles</h3>
+        <input type="text" placeholder="Prénom et nom" id="nom">
+        <input type="text" placeholder="Titre de l'emploi" id="jobname">
+        <input type="text" placeholder="Email" id="email">
+        <input type="text" placeholder="Adresse" id="addr">
+        <input type="text" placeholder="Telephone" id="tel">
+        <input type="text" placeholder="Nationalite" id="Nat">
+        <input type="text" placeholder="Date de naissance" onfocus="(this.type='date')" id="birth">
+    </div>
+    <div class="inputcontainer" id="pliercontainer2">
+        <img src="./assetes/img/fleche-vers-le-bas-pour-naviguer.png" class="fleche" id="flecheform" alt="">
+        <h3 style="margin-bottom: 10px;">Formation</h3>
+        <h5 id="eform"></h5>
+        <input type="text" placeholder="Ecole" id="inputscholl">
+        <input type="text" placeholder="Intitulé Formation" id="intFormation" >
+        <input type="month" min="1900" placeholder="Date de debut" id="datede">
+        <input type="month" min="1900" placeholder="Date de fin" id="datefin">
+        <input type="text" placeholder="Localité" id="localité">
+        <button class="btnadd" id="addFormation"> Ajouter Formation</button>
+    </div>
+    <div class="inputcontainer" id="pliercontainer4">
+        <img src="./assetes/img/fleche-vers-le-bas-pour-naviguer.png" class="fleche" id="flecheEXP" alt="">
+        <h3 style="margin-bottom: 10px;">Expériences professionnelles</h3>
+        <h5 id="eEXP"></h5>
+        <input type="text" placeholder="Poste" id="inputposte">
+        <input type="text" placeholder="Employeur" id="inputemplo">
+        <input type="text" placeholder="Localité" id="inputExploc">
+        <input type="month" min="1900" placeholder="Date de debut" id="datedeEXP">
+        <input type="month" min="1900" placeholder="Date de fin" id="datefinEXP">
+        <button class="btnadd" id="addEXP"> Ajouter Expérience</button>
+    </div>
+    <div class="inputcontainer" id="pliercontainer3">
+        <img src="./assetes/img/fleche-vers-le-bas-pour-naviguer.png" class="fleche" id="flecheCOM" alt="">
+        <h3 style="margin-bottom: 10px;">Compétences</h3>
+        <h5 id="ecomp"></h5>
+        <input type="text" placeholder="Competence" id="inputcomp">
+        <button class="btnadd" id="addCompetence"> Ajouter Compétence</button>
+    </div>
+    <div class="inputcontainer" id="pliercontainer5">
+        <img src="./assetes/img/fleche-vers-le-bas-pour-naviguer.png" class="fleche" id="flecheLAN" alt="">
+        <h3 style="margin-bottom: 10px;">Langues</h3>
+        <h5 id="elang"></h5>
+        <input type="text" placeholder="Langue" id="inputlangue">
+        <input type="text" placeholder="Niveau" id="inputniveau">
+        <button class="btnadd" id="addlangue"> Ajouter Langue</button>
+    </div>
+
+
+    <div class="change">
+        <h3>Choisir un modèle</h3>
+        <div class="direction">
+            <img src="assetes/img/flecheG.png" id="Mg" width="30px" alt="">
+            <img src="assetes/img/flecheD.png" id="Md" width="30px" alt="">
+        </div>
+    </div>
+    <div id="CV">
+        <div id="headCV">
+            <h2 id="nomcv"></h2>
+            <h4 id="job"></h4>
+            <div id="docontainer">
+                <div class="mailcontainer" ><img src="./assetes/img/email.png" alt="" width="15px">
+                    <p class="mailtxt"></p>
+                </div>
+                <div class="telcontainer"><img src="./assetes/img/appel-telephonique.png" width="15px" alt="">
+                    <p class="teltxt"></p>
+                </div>
+                <div class="mapcontainer"><img src="./assetes/img/maps-and-flags.png" width="15px" alt="">
+                    <p class="maptext"></p>
+                </div>
+                <div class="birthcontainer"><img src="./assetes/img/happy-birthday.png" width="15px" alt="">
+                    <p class="birthtxt"></p>
+                </div>
+                <div class="Nationalitecontainer"><img src="./assetes/img/drapeau.png" width="15px" alt="">
+                    <p class="nationalitetxt"></p>
+                </div>
+            </div>
+
+        </div>
+        <div id="bodyCV">
+            <div id="Formation">
+                <div id="intitulé">
+                    <h3>Formation</h3>
+                </div>
+                <div class="conataintxtbody" id="conatainform">
+                    
+                </div>
+            </div>
+            <div id="EXP">
+                <div id="intitulé">
+                    <h3>Expériences professionnelles</h3>
+                </div>
+                <div class="conataintxtbody" id="conatainEXP">
+                </div>
+            </div>
+            <div id="Competence">
+                <div id="intitulé">
+                    <h3>Compétences</h3>
+                </div>
+                <div class="conataintxtbody" id="conataincomp">
+                </div>
+            </div>
+            <div id="Langues">
+                <div id="intitulé">
+                    <h3>Langues</h3>
+                </div>
+                <div class="conataintxtbody" id="conatainlangue">
+                </div>
+            </div>
+        </div>
+    </div>
+       <button id="Telecharger"  >Télécharger le CV</button> 
+        <br>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+        <script>
+            document.getElementById("Telecharger").addEventListener("click", () => {
+              const cvElement = document.querySelector("#CV");
+        
+              html2canvas(cvElement, { scale: 2, useCORS: true }).then((canvas) => {
+                const imgData = canvas.toDataURL("image/png");
+        
+                // Récupérer jsPDF depuis le bundle UMD
+                const { jsPDF } = window.jspdf;
+                const pdf = new jsPDF("p", "mm", "a4");
+        
+                const pdfWidth = pdf.internal.pageSize.getWidth();
+                const imgProps = pdf.getImageProperties(imgData);
+                const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+        
+                pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
+                pdf.save("Mon-CV.pdf");
+              });
+            });
+          </script>
+        
+        <script src="./assetes/script/EntrerValeur.js"></script>
+        <script src="./assetes/script/Changemodel.js"></script>
+</body>
+</html>

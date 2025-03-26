@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
+
+body{
+    display: flex;
+    flex-direction: row;
+}
+#left{
+width: 50%;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background: black;
+}
+#right{
+    width: 50%;
+    height: 100vh;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#wellcome{
+    position: relative;
+    top: 150px;
+    font-size:175%;
+}
+#btn{
+width: 200px;
+height: 50px;
+display: flex;
+align-items: center;
+justify-content: center;
+background: white;
+color: black;
+position: relative;
+top: 300px;
+border-radius: 30px;
+cursor: pointer;
+transition: all 0.5s ease;
+box-shadow: 6px 8px 8px rgba(0, 0, 0, 0.2);
+border: 1px solid black;
+} 
+#btn:hover{
+    background: #c9c9c9;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0 );
+}
+@media(max-width:966px){
+ #left{
+    display: none;
+ }
+ #right{
+    width: 100%;
+ }
+ #wellcome{
+    font-size:130%;
+}
+}
+a{
+    text-decoration: none;
+}
